@@ -22,3 +22,6 @@ pip install -r requirements.txt
 
 4. **Lancer le projet** :
 uvicorn main:app --reload
+
+5.**Ouvrez le fichier index.html**
+pour tester
