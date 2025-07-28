@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des tâche</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans antialiased flex items-center justify-center min-h-screen p-4" >
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-md">
+      <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+          <i class="ri-checkbox-fill text-blue-500 mr-2"></i>Ma Liste de Tâches
+      </h1>
+
+      <div class="flex items-center mb-6">
+        <input type="text" id="newTaskInput" placeholder="Ajouter une nouvelle tâche..."
+                   class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200 ease-in-out text-gray-700">
+            <button id="addTaskButton"
+                class="ml-3 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 ease-in-out flex items-center justify-center">
+              <i class="ri-add-line text-xl"></i>
+            </button>
+        </div>
+        
+        <div id="taskList" class="space-y-4 max-h-96 overflow-y-auto pr-2">
+      </div>
+    </div>
+    <script>
+    axios.get('http://127.0.0.1:8000/tasks')
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.error('Erreur:', error);
+      });
+      
+    </script>
+</body>
+</html>
