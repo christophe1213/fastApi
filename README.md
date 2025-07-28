@@ -1,7 +1,6 @@
 # fastApi
 test fast api
-Une courte description de ton projet : ce qu’il fait, à quoi il sert, etc.
-
+Une courte description de ton projet
 ## 🚀 Installation
 
 1. **Cloner le dépôt** :
