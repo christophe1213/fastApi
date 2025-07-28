@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,19 +22,11 @@
               <i class="ri-add-line text-xl"></i>
             </button>
         </div>
-        
+
         <div id="taskList" class="space-y-4 max-h-96 overflow-y-auto pr-2">
       </div>
     </div>
-    <script>
-    axios.get('http://127.0.0.1:8000/tasks')
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.error('Erreur:', error);
-      });
-      
-    </script>
+    <script src="js/app.js"></script>
+  
 </body>
 </html>
